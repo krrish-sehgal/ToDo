@@ -1,0 +1,117 @@
+
+
+body{
+    margin:0px 0px;
+    padding:0px 0px;
+}
+.documentCont{
+
+    /* border:2px solid black; */
+    padding:12px 10px;
+    margin:2px 2px;
+    display:flex;
+    justify-content: center;
+    /* align-items: center; */
+    height:100vh;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#MenuBar{
+/* cont1 */
+    /* border: 2px solid black; */
+    padding: 12px 11px;
+    margin: 0px 0px;
+    width: 23%;
+    background-color: rgb(238, 238, 238);
+    border-radius: 6%;
+}
+#cont2{
+    /* border:2px solid black; */
+    width:75%;
+    padding:10px 4px;
+    margin:2px 22px;
+}
+#Heading{
+    padding: 2px 2px;
+    margin: 2px 2px;
+    font-size: 36px;
+    font-weight: bold;
+}
+#WallCont {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    border: 2px solid rgb(237, 237, 237);
+    border-radius: 3%;
+    padding: 11px 10px;
+    margin: 32px auto 22px;
+    height: 89%;
+}
+.stickyNote {
+    /* display: flex; */
+    border: 2px solid black;
+    padding: 2px 2px;
+    margin: 15px 21px;
+    width: 28%;
+    height:40%;
+    border-radius:2%;
+}
+input{
+    border:2px solid black;
+    padding:2px 2px;
+    margin:2px 2px;
+    width:90%;
+    height:17%;
+    font-size:20px;
+    font-weight: bold;
+    outline:none;
+}
+ul li{
+    list-style:none;
+    font-size:17px;
+    user-select: none;
+    cursor: pointer;
+    position:relative;
+    margin: 2px 2px 8px;
+}   
+ul li::before {
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 0%;
+    background-size: cover;
+    background-position: center;
+    top: -3px;
+    left: -30px;
+    background-image: url(images/unchecked.png);
+}
+.checked{
+    color:grey;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+button {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    border: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button::before {
+    content: ""; /* No content, but needed for the pseudo-element to generate */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 87px;
+    height: 73px;
+    background-image: url(images/greyPlus.png);
+    background-size: cover;
+    background-position: center;
+}
