@@ -16,35 +16,64 @@ function getRandomColor() {
 function addNote(){
     
     let backColor = getRandomColor();
-    
+
+    // creating note element
     let note =  document.createElement("div");
     note.className="stickyNote";
     note.style.backgroundColor=backColor;
     WallCont.insertBefore(note,newNoteButton);
 
+    //creating heading div
+    let heading = document.createElement("div");
+    heading.className="heading";
+
+    //creating heading subnodes
     let taskTitle = document.createElement("input");
     taskTitle.type="text";
     taskTitle.placeholder="Enter the Title😄";
-    note.appendChild(taskTitle);
-    
+    heading.appendChild(taskTitle);
 
+    let deleteButton = document.createElement("button");
+    deleteButton.className= "delete";
+    heading.appendChild(deleteButton);
+    console.log(deleteButton);
+
+    //appending heading as first child of new note
+    note.appendChild(heading);
+
+    
+    //creating a description box
     let desc = document.createElement("textarea");
     desc.name="desc";
     desc.cols="30";
     desc.rows="10";
     desc.placeholder="Enter the description";
     desc.id="desc";
+    note.appendChild(desc);
     
+    // EVENT LISTENERS
+
+    //title listeners
     taskTitle.addEventListener("keypress",function(event){
-        
+
         if(event.key==="Enter" && taskTitle.value!==""){
 
-        
-            note.appendChild(desc);
             desc.focus();
         }
     },true);
 
+    // delete listeners
+    note.addEventListener("mouseenter",function(){
+        deleteButton.style.display="block";
+    })
+    note.addEventListener("mouseleave",function(){
+        deleteButton.style.display="none";
+    })
+    deleteButton.addEventListener("click",function(){
+        WallCont.removeChild(note);
+    })
+
+    //textarea listeners
     desc.addEventListener("input",function(event){
         if(event.inputType === "deleteContentBackward" && desc.value===""){
             note.removeChild(desc)
@@ -54,4 +83,5 @@ function addNote(){
   
 }
 
+//newNotButton listeners
 newNoteButton.addEventListener("click",addNote,true);
