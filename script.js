@@ -7,7 +7,9 @@ var colors = [
     'rgb(230, 210, 255)',
     'rgb(255, 255, 180)',
     'rgb(255, 235, 240)',
-    'rgb(255, 250, 230)'];
+    'rgb(255, 250, 230)',
+    'rgb(253, 242, 179)'];
+
 
 function getRandomColor() {
   var randomIndex = Math.floor(Math.random() * colors.length);
