@@ -178,3 +178,22 @@ ul li.checked::before{
     background-position: center;
 }
 
+.tasks{
+    display: flex;
+flex-direction: column;
+padding: 2px 2px;
+margin: 2px 2px;
+}
+.search{
+    padding:2px 2px;
+    margin:2px 2px;
+    height:5%;
+
+}
+.searchIn{
+    background-color: white;
+    border-radius:10px;
+    font-size :12px;
+    font-weight:normal;
+    width:88%;
+}   
