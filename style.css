@@ -183,6 +183,7 @@ ul li.checked::before{
 flex-direction: column;
 padding: 2px 2px;
 margin: 2px 2px;
+
 }
 .search{
     padding:2px 2px;
@@ -197,3 +198,28 @@ margin: 2px 2px;
     font-weight:normal;
     width:88%;
 }   
+.taskButton{
+
+    padding: 13px 2px;
+    margin: 3px 2px;
+    cursor: pointer;
+    /* border:0px; */
+    border-radius: 10px;
+    background-color:white;
+    box-shadow: none;
+    
+
+}
+.settings{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding:2px 2px;
+    margin:2px 2px;
+    margin-top: auto;
+    margin-bottom: 7px;
+}
+.bottomItem{
+    margin:2px 2px;
+    padding:2px 2px;
+}
