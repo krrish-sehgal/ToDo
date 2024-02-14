@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <!-- importing ubunto font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+    <div class="documentCont">
+
+        <div class="container" id="MenuBar">
+            <h2 style="padding: 2px 2px; margin: 2px 2px;">MENU</h2>
+            <div class="search">
+                <input type="text" class="searchIn" placeholder="Search">
+            </div>
+            <div class="tasks">
+                <button class = "taskButton">Upcoming</button>
+                <button class = "taskButton">today</button>
+                <button class = "taskButton">calendar</button>
+                <button class = "taskButton">stickyWall</button>
+            </div>
+            <ul class="listsInMenu">
+                <li class="liItem">personal</li>
+                <li class="liItem">personal</li>
+                <li class="liItem">personal</li>
+                <button class="liItem"></button>
+            </ul>
+            <div class="settings ">
+                <button class = "bottomItem">Settings</button>
+                <button class= "bottomItem ">LogOut</button>
+            </div>
+        </div>
+        <div class= "container" id="cont2">
+
+            <span id="Heading">Sticky Wall</span>
+
+            <div class="container" id="WallCont">
+
+                <button class="addNote stickyNote addNoteButton" id="newNote" ></button>
+
+                <!-- <div class="stickyNote" id="Note1">
+                    <div class="heading">
+                        <input type="text" placeholder="Enter the Title">
+                        <button class ="delete"></button>
+                    </div>
+                    <textarea name="desc" cols="30" rows="10" placeholder="Enter the description" id="desc"></textarea>
+                </div> -->
+
+                <!-- <div class="stickyNote" id="Note2">
+                    <input type="text" placeholder="Enter the Title">
+                    <ul>
+                        <li class="checked">Task-1</li>
+                        <li class="checked">Task-2</li>
+                        <li class="checked">Task-3</li>
+                    </ul>
+                </div>
+                -->
+            </div>
+
+        </div>
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
